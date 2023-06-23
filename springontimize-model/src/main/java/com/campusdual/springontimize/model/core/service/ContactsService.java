@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Contacts service.
+ */
 @Lazy
 @Service("ContactsService")
 public class ContactsService implements IContactService {
@@ -21,22 +24,22 @@ public class ContactsService implements IContactService {
     @Autowired
     private DefaultOntimizeDaoHelper daoHelper;
     @Override
-    public EntityResult contactQuery(Map<?, ?> keyMap, List<?> attrList) {
+    public EntityResult contactQuery(Map<String, Object> keyMap, List<String> attrList) {
         return this.daoHelper.query(contactDao,keyMap,attrList);
     }
 
     @Override
-    public EntityResult contactInsert(Map<?, ?> attrMap) {
+    public EntityResult contactInsert(Map<String, Object> attrMap) {
         return this.daoHelper.insert(contactDao,attrMap);
     }
 
     @Override
-    public EntityResult contactUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap) {
+    public EntityResult contactUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) {
         return daoHelper.update(contactDao,attrMap,keyMap);
     }
 
     @Override
-    public EntityResult contactDelete(Map<?, ?> keyMap) {
+    public EntityResult contactDelete(Map<String, Object> keyMap) {
         return daoHelper.delete(contactDao,keyMap);
     }
 }

@@ -27,24 +27,24 @@ public class UserService implements IUserService {
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
 
-	public void loginQuery(Map<?, ?> key, List<?> attr) {
+	public void loginQuery(Map<String, Object> key, List<String> attr) {
 	}
 
 	//Sample to permission
 	//@Secured({ PermissionsProviderSecured.SECURED })
-	public EntityResult userQuery(Map<?, ?> keyMap, List<?> attrList) {
+	public EntityResult userQuery(Map<String, Object> keyMap, List<String> attrList) {
 		return this.daoHelper.query(userDao, keyMap, attrList);
 	}
 
-	public EntityResult userInsert(Map<?, ?> attrMap) {
+	public EntityResult userInsert(Map<String, Object> attrMap) {
 		return this.daoHelper.insert(userDao, attrMap);
 	}
 
-	public EntityResult userUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap) {
+	public EntityResult userUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) {
 		return this.daoHelper.update(userDao, attrMap, keyMap);
 	}
 
-	public EntityResult userDelete(Map<?, ?> keyMap) {
+	public EntityResult userDelete(Map<String, Object> keyMap) {
 		return this.daoHelper.delete(this.userDao, keyMap);
 	}
 

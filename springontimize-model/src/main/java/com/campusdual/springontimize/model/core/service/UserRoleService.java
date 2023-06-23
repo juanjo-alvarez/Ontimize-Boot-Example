@@ -47,6 +47,7 @@ public class UserRoleService implements IUserRoleService {
 
     @Override
     public EntityResult myRoleQuery(Map<String, Object> keyMap, List<String> attrList) {
+        //ad the user role to the query
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         keyMap.put(UserRoleDao.ATTT_USER_,auth.getName());
         attrList.add(UserRoleDao.ATTT_ROLENAME);

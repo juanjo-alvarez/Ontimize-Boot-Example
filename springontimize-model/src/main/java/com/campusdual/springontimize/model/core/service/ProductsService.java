@@ -80,16 +80,19 @@ public class ProductsService implements IProductService {
         attrList.remove(ProductFileDao.ATTR_BASE64);
         EntityResult fileResult = daoHelper.query(productFileDao,keyMap,attrList);
         List<String> base64Files = new ArrayList<>();
+        //for each file calculate the Base64 value of the local file
         for(int i=0;i<fileResult.calculateRecordNumber();i++){
             String filePath = (String) fileResult.getRecordValues(i).get(ProductFileDao.ATTR_PATH);
             File file = new File(filePath);
             try {
+                //caulcuate the Base64
                 byte[] encoded = Base64.encodeBase64(FileUtils.readFileToByteArray(file));
                 base64Files.add(new String(encoded));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        //add all the Base64 values for each file
         fileResult.put(ProductFileDao.ATTR_BASE64,base64Files);
         return fileResult;
     }
