@@ -121,7 +121,7 @@ INSERT INTO CONTACTS VALUES(27,'Cirstoforo','Malley','Barnewall','5594718010','c
 INSERT INTO CONTACTS VALUES(28,'Esteban','Busst','Mottershaw','9773716843','emottershawr@prlog.org')
 INSERT INTO CONTACTS VALUES(29,'Vin','O''Corren','Spring','1922133703','vsprings@barnesandnoble.com')
 INSERT INTO CONTACTS VALUES(30,'Scotty','Thorndycraft','Chaffen','5379290697','schaffent@chicagotribune.com')
-INSERT INTO PRODUCTS VALUES(1,'Milk',332,1.71,'1','2019-12-14')
+INSERT INTO PRODUCTS VALUES(1,'Milk',332,1.71,'1','2023-07-03')
 INSERT INTO PRODUCTS VALUES(2,'Norwegian salmon',45,10.89,'1','2023-06-20')
 INSERT INTO PRODUCTS VALUES(3,'Pork ribs',71,5.75,'1','2023-06-20')
 INSERT INTO PRODUCTS VALUES(4,'Tomates',6,12.00,'1','2023-06-19')

@@ -56,11 +56,6 @@ public class ProductsService implements IProductService {
 
     @Override
     public EntityResult productUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) {
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        LocalDate dateTime = LocalDate.parse((String) attrMap.get(ProductDao.ATTR_DATE_ADDED), formatter);
-        Date date = Date.from(dateTime.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
-        attrMap.put(ProductDao.ATTR_DATE_ADDED,date);
         return daoHelper.update(productDao,attrMap,keyMap);
     }
 
