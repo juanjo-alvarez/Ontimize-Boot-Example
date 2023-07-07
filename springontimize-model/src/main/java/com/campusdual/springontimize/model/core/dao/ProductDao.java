@@ -16,4 +16,5 @@ public class ProductDao extends OntimizeJdbcDaoSupport {
     public static final String ATTR_PRICE = "PRICE";
     public static final String ATTR_ACTIVE = "ACTIVE";
     public static final String ATTR_DATE_ADDED = "DATE_ADDED";
+    public static final String ATTR_PROCEDENCE = "PROCEDENCE";
 }
